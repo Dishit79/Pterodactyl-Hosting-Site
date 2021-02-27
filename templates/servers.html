@@ -1,0 +1,65 @@
+{% extends "inherit.html" %}
+
+{% block title %} DijxCloud Servers{% endblock %}
+
+{% block redirect %}/dashboard{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+    <!-- Stats Row -->
+    <div class="row">
+      <div class="container-fluid">
+
+          <!-- Page Heading -->
+
+          <div class="d-sm-flex align-items-center justify-content-between mb-4 pr-2">
+            <h1 class="h3 mb-2 text-gray-800">{{user.name}}'s Servers</h1>
+            <a href="/dashboard/servers/" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" disabled><i class="fas fa-redo fa-sm text-white-50"></i> Refresh </a>
+          </div>
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Servers</h6>
+              </div>
+              <div class="card-body">
+                  <div class="table-responsive">
+                      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                          <thead>
+                              <tr>
+                                  <th>Server Name</th>
+                                  <th>Server Location</th>
+                                  <th>Server Type</th>
+                                  <th>RAM</th>
+                                  <th>Storage</th>
+                                  <th>CPU</th>
+                                  <th>Date Created</th>
+                                  <th>Actions</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                            {%for i in (server)%}
+                              <tr>
+                                  <td>{{i['data']['attributes']['name']}}</td>
+                                  <td>{{i['node']['attributes']['name']}}</td>
+                                  <td>{{i['egg']['attributes']['name']}}</td>
+                                  <td>{{i['data']['attributes']['limits']['memory']}}</td>
+                                  <td>{{i['data']['attributes']['limits']['disk']}}</td>
+                                  <td>{{i['data']['attributes']['limits']['cpu']}}</td>
+                                  <td>{{i['data']['attributes']['created_at']}}</td>
+                                  <td><a type="button" href="/dashboard/modify/id={{ loop.index0 }}" class="btn btn-primary">Modify</a> <a type="button" href="/delete/{{i['data']['attributes']['id']}}" class="btn btn-danger">Delete</a></td>
+                              </tr>
+                              {%endfor%}
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+
+
+</div>
+</div>
+{% endblock %}

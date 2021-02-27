@@ -1,0 +1,100 @@
+{% extends "inherit.html" %}
+
+{% block title %} DijxCloud Profile{% endblock %}
+
+{% block redirect %}/dashboard{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+    <!-- Stats Row -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 pr-2">
+          <h1 class="h3 mb-2 text-gray-800">{{user.name}}'s Account</h1>
+        </div>
+
+
+                        <div class="row px-2">
+                            <div class="col-xl-4">
+                                <!-- Profile picture card-->
+                                <div class="card">
+                                    <div class="card-header">Profile</div>
+                                    <div class="card-body text-center">
+                                        <!-- Profile picture image-->
+                                        <img class="img-account-profile rounded-circle mb-2" src="{{user.avatar_url or user.default_avatar_url}}" alt />
+                                        <!-- Profile picture help block-->
+                                        <h3>{{user.name}}#{{user.discriminator}}</h3>
+                                        <hr class="solid">
+                                        <div class="row px">
+                                        <div class="col-sm-6">
+                                          <p class="text-left fs-1"><b>Ram:</b> {{data['ram']}}mb <br><b>Cpu:</b> {{data['cpu']}}% <br> <b>Storage:</b> {{data['disk']}}mb <br> <b>Servers:</b> {{data['server']}}</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                          <p class="text-center fs-1"><b>DijxCloud Plan:</b><br>{{data['plan']}}<br><b>Invoice:</b><br><sup>$</sup>0/mo</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-xl-8">
+                                <!-- Account card-->
+                                <div class="card mb-4">
+                                    <div class="card-header">Account Details</div>
+                                    <div class="card-body">
+                                            <!-- Form Group-->
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="inputUsername">Username</label>
+                                                <input class="form-control" type="text" value="{{info['attributes']['username']}}" readonly/>
+                                            </div>
+                                            <!-- Form Group-->
+                                            <div class="form-row">
+                                                <!-- Form Group-->
+                                                <div class="form-group col-md-6">
+                                                    <label class="small mb-1" for="inputFirstName">First name</label>
+                                                    <input class="form-control" type="text" value="{{info['attributes']['first_name']}}" readonly/>
+                                                </div>
+                                                <!-- Form Group (last name)-->
+                                                <div class="form-group col-md-6">
+                                                    <label class="small mb-1" for="inputLastName">Last name</label>
+                                                    <input class="form-control" type="text" value="{{info['attributes']['last_name']}}" readonly/>
+                                                </div>
+                                            </div>
+
+                                            <!-- Form Group (email address)-->
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="inputEmailAddress">Email address</label>
+                                                <input class="form-control" type="email" value="{{info['attributes']['email']}}" readonly/>
+                                            </div>
+                                            <!-- Form Row-->
+                                            <div class="form-row">
+                                                <!-- Form Group (phone number)-->
+                                                <div class="form-group col-md-6">
+                                                    <label class="small mb-1" for="inputPhone">External id</label>
+                                                    <input class="form-control" type="tel" value="{{info['attributes']['external_id']}}" readonly/>
+                                                </div>
+                                                <!-- Form Group (birthday)-->
+                                                <div class="form-group col-md-6">
+                                                    <label class="small mb-1" for="inputBirthday">Account creation date</label>
+                                                    <input class="form-control" type="text" value="{{info['attributes']['created_at']}}" readonly/>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="card">
+                                    <div class="card-header">Password reset</div>
+                                    <div class="card-body">
+                                          <form method="post">
+                                          <p><label class="small mb-1">Password</label>
+                                          <input class="form-control" type="password" name="password" placeholder="password123" required/><br>
+                                          <input type="submit" value="Reset Password"/></p>
+                                          </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+{% endblock %}

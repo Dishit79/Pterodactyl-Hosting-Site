@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content />
+        <meta name="author" content />
+        <title>Pricing - SB Admin Pro</title>
+        <link href="/static/css/style.css" rel="stylesheet" />
+        <link rel="icon" type="image/png" href="/static/img/favicon.png"/>
+        <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="nav-fixed">
+
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_content">
+              <nav class="navbar navbar-marketing navbar-expand-lg bg-transparent navbar-dark fixed-top">
+                  <div class="container">
+                      <a class="navbar-brand text-white">DijxCloud</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav ml-auto mr-lg-5">
+                              <li class="nav-item"><a class="nav-link" href="/">Home </a></li>
+                              <li class="nav-item dropdown no-caret">
+                                  <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources<i class="fas fa-chevron-right dropdown-arrow"></i></a>
+                                  <div class="dropdown-menu dropdown-menu-right animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
+                                      <a class="dropdown-item py-3" href="https://panel.dijx.xyz/">
+                                          <div class="icon-stack bg-primary-soft text-primary mr-4"><i data-feather="monitor"></i></div>
+                                          <div>
+                                              <div class="small text-gray-500">Panel</div>
+                                              <!--Usage instructions and reference--> DijxCloud Panel
+                                          </div></a>
+                                      <div class="dropdown-divider m-0"></div>
+                                      <a class="dropdown-item py-3" href="https://status.dijx.xyz/">
+                                        <div class="icon-stack bg-primary-soft text-primary mr-4"><i data-feather="upload-cloud"></i></div>
+                                          <div>
+                                              <div class="small text-gray-500">Status</div>
+                                              <!--Updates and changes--> DijxCloud Status
+                                          </div></a>
+                                  </div>
+                              </li>
+                              <li class="nav-item dropdown no-caret">
+                                  <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account<i class="fas fa-chevron-right dropdown-arrow"></i></a>
+                                  <div class="dropdown-menu dropdown-menu-right animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
+                                            {% if t == True %}
+                                            <a class="dropdown-item py-3" href="/logout/">
+                                                <div>
+                                                    <div class="small text-gray-500">Account</div>
+                                                    Sign out
+                                                </div></a>
+                                            {% else %}
+                                            <a class="dropdown-item py-3" href="/login/">
+                                                <div>
+                                                    <div class="small text-gray-500">Account</div>
+                                                    Sign in
+                                                </div></a>
+                                            {% endif %}
+                                  </div>
+                              </li>
+                          </ul>
+                          {% if t == True %}
+                          <a class="btn font-weight-500 ml-lg-4 btn-teal" href="/dashboard/">Dashboard<i class="ml-2" ></i></a>
+                          {% else %}
+                          <a class="btn font-weight-500 ml-lg-4 btn-teal" href="/login/">Login<i class="ml-2" data-feather="arrow-right"></i></a>
+                          {% endif %}
+                      </div>
+                  </div>
+              </nav>
+
+                <main>
+                    <header class="page-header page-header-dark bg-gradient-primary-to-secondary mb-5">
+                        <div class="container">
+                            <div class="page-header-content pt-4">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto mt-4">
+                                      <div class="col-lg-6" data-aos="fade-up">
+                                          <h1 class="page-header-title">Hosting Plans</h1>
+                                          <p class="page-header-text mb-4">Here, you'll be able to find the perfect plan for whatever projects you want to create. From Minecraft servers to Discord Bot hosting, we've got you covered.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="svg-border-rounded text-white">
+                            <!-- Rounded SVG Border--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0" /></svg>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <div class="display-4 text-primary mb-2">Affordable pricing for your team.</div>
+                            <div class="display-4">No surprises, no commitments, no setup fees.</div>
+                        </div>
+                        <!-- Detailed pricing example-->
+                        <div class="row z-1">
+                            <div class="col-lg-4 mb-5 mb-lg-n10" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card pricing h-100">
+                                    <div class="card-body p-5">
+                                        <div class="text-center">
+                                            <div class="badge badge-light badge-pill badge-marketing badge-sm">Development</div>
+                                            <div class="pricing-price"><sup>$</sup>0.99<span class="pricing-price-period">/mo</span></div>
+                                        </div>
+                                        <ul class="fa-ul pricing-list">
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">1 Server</span>
+                                            </li>
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">256MB RAM</span>
+                                            </li>
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">5GB SSD Storage</span>
+                                            </li>
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">24/7 Uptime</span>
+                                            </li>
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">Community support</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-5 mb-lg-n10" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card pricing h-100">
+                                    <div class="card-body p-5">
+                                        <div class="text-center">
+                                            <div class="badge badge-info-soft badge-pill badge-marketing badge-sm text-info">Game Server</div>
+                                            <div class="pricing-price"><sup>$</sup>1.99<span class="pricing-price-period">/mo</span></div>
+                                        </div>
+                                        <ul class="fa-ul pricing-list">
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">1 Dedicated Game Server</span>
+                                            </li>
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">1024MB RAM</span>
+                                            </li>
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">10GB SSD Storage</span>
+                                            </li>
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">24/7 Uptime</span>
+                                            </li>
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">Premium Support</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-5 mb-lg-n10" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card pricing h-100">
+                                    <div class="card-body p-5">
+                                        <div class="text-center">
+                                            <div class="badge badge-primary-soft badge-pill badge-marketing badge-sm text-primary">Minecraft</div>
+                                            <div class="pricing-price"><sup>$</sup>2.99<span class="pricing-price-period">/mo</span></div>
+                                        </div>
+                                        <ul class="fa-ul pricing-list">
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">1 Dedicated MC Server</span>
+                                            </li>
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">1536MB RAM</span>
+                                            </li>
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">Unlimited Storage*</span>
+                                            </li>
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">24/7 Uptime</span>
+                                            </li>
+                                            <li class="pricing-list-item">
+                                                <span class="fa-li"><i class="far fa-check-circle text-teal"></i></span><span class="text-dark">Premium Support</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-10" />
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <div class="display-4 text-primary mb-2">Development Servers</div>
+                            <div class="display-4">Pick what&apos;s right for you and your team.</div>
+                        </div>
+                        <!-- Pricing columns example-->
+                        <div class="pricing-columns">
+                            <div class="row justify-content-center">
+                                <!-- Pricing column 1-->
+                                <div class="col-xl-4 col-lg-6 mb-4 mb-xl-0">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-transparent">
+                                            <span class="badge badge-primary-soft text-primary badge-pill py-2 px-3 mb-2">Lite</span>
+                                            <div class="pricing-columns-price">
+                                                $0.99
+                                                <span>/month</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                    1 Server
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                    256MB RAM
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                    5GB SSD Storage
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                    24/7 Uptime
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                    Community Support
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a class="card-footer d-flex align-items-center justify-content-between text-decoration-none bg-primary-soft" href="#!">
+                                            Purchase Plan
+                                            <i data-feather="arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Pricing column 2-->
+                                <div class="col-xl-4 col-lg-6 mb-4 mb-xl-0">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-transparent">
+                                            <span class="badge badge-secondary-soft text-secondary badge-pill py-2 px-3 mb-2">Premium</span>
+                                            <div class="pricing-columns-price">
+                                                $2.99
+                                                <span>/month</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                    3 Servers
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                    1024MB RAM
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                    10GB SSD Storage
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                    24/7 Uptime
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                    Premium Support
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a class="card-footer d-flex align-items-center justify-content-between text-secondary bg-secondary-soft text-decoration-none" href="#!">
+                                            Purchase Plan
+                                            <i data-feather="arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Pricing column 3-->
+                                <div class="col-xl-4 col-lg-6">
+                                    <div class="pricing-table">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-transparent">
+                                                <span class="badge badge-success-soft text-success badge-pill py-2 px-3 mb-2">Ultimate</span>
+                                                <div class="pricing-columns-price">
+                                                    $4.99
+                                                    <span>/month</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-body p-0">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">
+                                                        <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                        5 Servers
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                        2048MB RAM
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                        20GB SSD Storage
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                        24/7 Uptime
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                        Premium support
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a class="card-footer d-flex align-items-center justify-content-between text-success bg-success-soft text-decoration-none" href="#!">
+                                                Purchase Plan
+                                                <i data-feather="arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <hr class="my-10" />
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <div class="display-4 text-primary mb-2">Minecraft Servers</div>
+                        <div class="display-4">Multiple plans for mutliple use cases.</div>
+                    </div>
+                    <!-- Pricing columns example-->
+                    <div class="pricing-columns">
+                        <div class="row justify-content-center">
+                            <!-- Pricing column 1-->
+                            <div class="col-xl-4 col-lg-6 mb-4 mb-xl-0">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent">
+                                        <span class="badge badge-primary-soft text-primary badge-pill py-2 px-3 mb-2">Vanilla Lite</span>
+                                        <div class="pricing-columns-price">
+                                            $2.99
+                                            <span>/month</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                1 Dedicated MC Server
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                1536MB RAM
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                Unlimited Storage*
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                24/7 Uptime
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                Community Support
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a class="card-footer d-flex align-items-center justify-content-between text-decoration-none bg-primary-soft" href="#!">
+                                        Purchase Plan
+                                        <i data-feather="arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Pricing column 2-->
+                            <div class="col-xl-4 col-lg-6 mb-4 mb-xl-0">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent">
+                                        <span class="badge badge-secondary-soft text-secondary badge-pill py-2 px-3 mb-2">Vanilla Premium</span>
+                                        <div class="pricing-columns-price">
+                                            $4.99
+                                            <span>/month</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                1 Dedicated MC Server
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                3072MB RAM
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                Unlimited Storage*
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                24/7 Uptime
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                Premium Support
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a class="card-footer d-flex align-items-center justify-content-between text-secondary bg-secondary-soft text-decoration-none" href="#!">
+                                        Purchase Plan
+                                        <i data-feather="arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Pricing column 3-->
+                            <div class="col-xl-4 col-lg-6">
+                                <div class="pricing-table">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-transparent">
+                                            <span class="badge badge-success-soft text-success badge-pill py-2 px-3 mb-2">Vanilla Ultimate</span>
+                                            <div class="pricing-columns-price">
+                                                $7.99
+                                                <span>/month</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                    1 Dedicated MC Server
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                    5120MB RAM
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                    Unlimited Storage*
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                    24/7 Uptime
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                    Premium support
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a class="card-footer d-flex align-items-center justify-content-between text-success bg-success-soft text-decoration-none" href="#!">
+                                            Purchase Plan
+                                            <i data-feather="arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mb-5">
+                            <div class="display-4"></div>
+                        </div>
+
+                        <div class="pricing-columns">
+                            <div class="row justify-content-center">
+                                <!-- Pricing column 1-->
+                                <div class="col-xl-4 col-lg-6 mb-4 mb-xl-0">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-transparent">
+                                            <span class="badge badge-primary-soft text-primary badge-pill py-2 px-3 mb-2">Modded Lite</span>
+                                            <div class="pricing-columns-price">
+                                                $3.99
+                                                <span>/month</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                    1 Dedicated MC Server
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                    2048MB RAM
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                    Unlimited Storage*
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                    24/7 Uptime
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                    Community Support
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a class="card-footer d-flex align-items-center justify-content-between text-decoration-none bg-primary-soft" href="#!">
+                                            Purchase Plan
+                                            <i data-feather="arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Pricing column 2-->
+                                <div class="col-xl-4 col-lg-6 mb-4 mb-xl-0">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-transparent">
+                                            <span class="badge badge-secondary-soft text-secondary badge-pill py-2 px-3 mb-2">Modded Premium</span>
+                                            <div class="pricing-columns-price">
+                                                $5.99
+                                                <span>/month</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                    1 Dedicated MC Server
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                    4096MB RAM
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                    Unlimited Storage*
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                    24/7 Uptime
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                    Premium Support
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a class="card-footer d-flex align-items-center justify-content-between text-secondary bg-secondary-soft text-decoration-none" href="#!">
+                                            Purchase Plan
+                                            <i data-feather="arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Pricing column 3-->
+                                <div class="col-xl-4 col-lg-6">
+                                    <div class="pricing-table">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-transparent">
+                                                <span class="badge badge-success-soft text-success badge-pill py-2 px-3 mb-2">Modded Ultimate</span>
+                                                <div class="pricing-columns-price">
+                                                    $8.99
+                                                    <span>/month</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-body p-0">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">
+                                                        <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                        1 Dedicated MC Server
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                        6144MB RAM
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                        Unlimited Storage*
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                        24/7 Uptime
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                        Premium support
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a class="card-footer d-flex align-items-center justify-content-between text-success bg-success-soft text-decoration-none" href="#!">
+                                                Purchase Plan
+                                                <i data-feather="arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="text-center mt-5">
+                            <div class="display-10">*People who abuse our unlimited storage by storing files other than Minecraft files will be deleted.</div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-10" />
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <div class="display-4 text-primary mb-2">Game Servers</div>
+                        <div class="display-4">From GTA to Terraria, we've got you covered.</div>
+                    </div>
+                    <!-- Pricing columns example-->
+                    <div class="pricing-columns">
+                        <div class="row justify-content-center">
+                            <!-- Pricing column 1-->
+                            <div class="col-xl-4 col-lg-6 mb-4 mb-xl-0">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent">
+                                        <span class="badge badge-primary-soft text-primary badge-pill py-2 px-3 mb-2">Lite</span>
+                                        <div class="pricing-columns-price">
+                                            $1.99
+                                            <span>/month</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                1 Dedicated Game Server
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                1024MB RAM
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                10GB SSD Storage
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                24/7 Uptime
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-primary mr-2" data-feather="check-circle"></i>
+                                                Community Support
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a class="card-footer d-flex align-items-center justify-content-between text-decoration-none bg-primary-soft" href="#!">
+                                        Purchase Plan
+                                        <i data-feather="arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Pricing column 2-->
+                            <div class="col-xl-4 col-lg-6 mb-4 mb-xl-0">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent">
+                                        <span class="badge badge-secondary-soft text-secondary badge-pill py-2 px-3 mb-2">Premium</span>
+                                        <div class="pricing-columns-price">
+                                            $3.99
+                                            <span>/month</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                1 Dedicated Game Server
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                2048MB RAM
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                15GB SSD Storage
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                24/7 Uptime
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="text-secondary mr-2" data-feather="check-circle"></i>
+                                                Premium Support
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a class="card-footer d-flex align-items-center justify-content-between text-secondary bg-secondary-soft text-decoration-none" href="#!">
+                                        Purchase Plan
+                                        <i data-feather="arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Pricing column 3-->
+                            <div class="col-xl-4 col-lg-6">
+                                <div class="pricing-table">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-transparent">
+                                            <span class="badge badge-success-soft text-success badge-pill py-2 px-3 mb-2">Ultimate</span>
+                                            <div class="pricing-columns-price">
+                                                $5.99
+                                                <span>/month</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                    1 Dedicated Game Server
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                    3072MB RAM
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                    20GB SSD Storage
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                    24/7 Uptime
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="text-success mr-2" data-feather="check-circle"></i>
+                                                    Premium support
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a class="card-footer d-flex align-items-center justify-content-between text-success bg-success-soft text-decoration-none" href="#!">
+                                            Purchase Plan
+                                            <i data-feather="arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-10" />
+                    <div class="text-center mb-5">
+                        <div class="display-4 text-primary mb-2">Looking for a custom plan?</div>
+                        <div class="display-5">Contact us on Discord so we can make a perfect plan for you.</div>
+                    </div>
+                    <hr class="my-10" />
+                </main>
+                <footer class="footer mt-auto footer-light">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 small">Copyright &#xA9; DijxCloud 2021</div>
+                            <div class="col-md-6 text-md-right small">
+                                <a href="#!">Privacy Policy</a>
+                                &#xB7;
+                                <a href="#!">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="/static/js/script.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                disable: 'mobile',
+                duration: 600,
+                once: true,
+            });
+        </script>
+
+
+        <script src="js/sb-customizer.js"></script>
+        <sb-customizer project="sb-admin-pro"></sb-customizer>
+    </body>
+</html>

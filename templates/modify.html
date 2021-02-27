@@ -1,0 +1,202 @@
+{% extends "inherit.html" %}
+
+{% block title %} DijxCloud Modify{% endblock %}
+
+{% block redirect %}/dashboard{% endblock %}
+
+{% block content %}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Server Modifcation Panel</h1>
+
+    </div>
+
+    <!-- Stats Row -->
+    <div class="row">
+
+      <!-- Ram (Monthly) Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-info shadow h-100 py-2">
+              <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Ram ({{data['ram']}}mb)
+                          </div>
+                          <div class="row no-gutters align-items-center">
+                              <div class="col-auto">
+                                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{used['left']['ram']}}MB</div>
+                              </div>
+                              <div class="col">
+                                Available
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Cpu (Monthly) Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-info shadow h-100 py-2">
+              <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Cpu ({{data['cpu']}}%)
+                          </div>
+                          <div class="row no-gutters align-items-center">
+                              <div class="col-auto">
+                                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{used['left']['cpu']}}%</div>
+                              </div>
+                              <div class="col">
+                                Available
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Disk (Monthly) Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-info shadow h-100 py-2">
+              <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Disk ({{data['disk']}}mb)
+                          </div>
+                          <div class="row no-gutters align-items-center">
+                              <div class="col-auto">
+                                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{used['left']['disk']}} MB</div>
+                              </div>
+                              <div class="col">
+                                Available
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+        <!-- Pending Requests Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Servers </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{used['used']['server']}} / {{data['server']}}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-server fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- Content Column -->
+        <div class="col-lg-12 mb-4">
+
+            <!-- Project Card Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Edit server</h6>
+                </div>
+                <div class="card-body">
+                  <form action="#" method="post">
+                    <div class="input-group mb-3 ">
+                      <span class="input-group-text" id="basic-addon1">Server Name</span>
+                      <input type="text" class="form-control" placeholder="{{server['data']['attributes']['name']}}" readonly>
+                    </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">Server Location</span>
+                      <input type="number" class="form-control" aria-label="node" placeholder="{{server['node']['attributes']['name']}}" readonly>
+                    </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">Server Type</span>
+                      <input type="number" class="form-control" aria-label="egg" placeholder="{{server['egg']['attributes']['name']}}" readonly>
+                    </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">RAM</span>
+                      <input type="number" name="ram" class="form-control" aria-label="Ram" value="{{server['data']['attributes']['limits']['memory']}}" aria-describedby="basic-addon1" oninput="check(this)" required>
+                      <span class="input-group-text" id="basic-addon2">MB</span>
+                    </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">Storage</span>
+                      <input type="number" name="disk" class="form-control" value="{{server['data']['attributes']['limits']['disk']}}" aria-label="Storage" aria-describedby="basic-addon1" oninput="check1(this)" required>
+                       <span class="input-group-text" id="basic-addon2">MB</span>
+                    </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">CPU</span>
+                      <input type="number" name="cpu" class="form-control" value="{{server['data']['attributes']['limits']['cpu']}}" aria-label="Cpu" aria-describedby="basic-addon1" oninput="check2(this)" required>
+                      <span class="input-group-text" id="basic-addon2">%</span>
+                    </div>
+                    <p><input type="submit" value="Edit Server"/></p>
+                  </form>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="col-lg-6 mb-4">
+
+            <!-- Illustrations -->
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+   function check(input) {
+   if (input.value == 0 || input.value > {{used['left']['ram'] + server['data']['attributes']['limits']['memory']}}) {
+     input.setCustomValidity('The number must not be zero or higher than available resources.');
+   } else {
+     // input is fine -- reset the error message
+     input.setCustomValidity('');
+   }
+ }
+   function check1(input) {
+   if (input.value == 0 || input.value > {{used['left']['disk'] + server['data']['attributes']['limits']['disk']}}) {
+     input.setCustomValidity('The number must not be zero or higher than available resources.');
+   } else {
+     // input is fine -- reset the error message
+     input.setCustomValidity('');
+   }
+ }
+   function check2(input) {
+   if (input.value == 0 || input.value > {{used['left']['cpu'] + server['data']['attributes']['limits']['cpu']}}) {
+     input.setCustomValidity('The number must not be zero or higher than available resources.');
+   } else {
+     // input is fine -- reset the error message
+     input.setCustomValidity('');
+   }
+ }
+</script>
+{% endblock %}
